@@ -1,5 +1,4 @@
 # Uses python3
-from functools import reduce
 
 n = int(input())
 numbers = [ int(x) for x in input().split() ]
