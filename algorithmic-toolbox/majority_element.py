@@ -4,9 +4,14 @@ import sys
 def get_majority_element(a, left, right):
     if left == right:
         return -1
-    if left + 1 == right:
-        return a[left]
-    #write your code here
+    number_count = {}
+    for i in range(left+1, right):        
+        number_count[a[i]] = number_count[a[i]] + 1 if number_count.get(a[i])!=None else 1
+
+    print(number_count)
+    for count in number_count.values():
+        if count > 1:
+            return 1
     return -1
 
 if __name__ == '__main__':
@@ -16,3 +21,4 @@ if __name__ == '__main__':
         print(1)
     else:
         print(0)
+    
